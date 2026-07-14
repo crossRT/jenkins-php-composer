@@ -4,9 +4,9 @@ This container image includes php-cli, composer and some essential php extension
 [![Docker Pulls](https://img.shields.io/docker/pulls/crossrt/jenkins-php-composer)](https://hub.docker.com/r/crossrt/jenkins-php-composer)
 
 ## What's in the image:
-- alpine:3.19
-- php:8.3.14
-- composer:2.5.1
+- alpine:3.24.1
+- php:8.5.8
+- composer:2.10.2
 - php extensions: zip, exif, gd, sockets
 
 ## Why create this image?
