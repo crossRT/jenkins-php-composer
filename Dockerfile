@@ -7,3 +7,5 @@ RUN docker-php-ext-install zip \
     && docker-php-ext-install exif \
     && docker-php-ext-install gd \
     && docker-php-ext-install sockets
+
+ENV HOME=/tmp
