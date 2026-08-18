@@ -4,14 +4,22 @@ This container image includes php-cli, composer and some essential php extension
 [![Docker Pulls](https://img.shields.io/docker/pulls/crossrt/jenkins-php-composer)](https://hub.docker.com/r/crossrt/jenkins-php-composer)
 
 ## What's in the image:
-- alpine:3.24.1
-- php:8.5.8
-- composer:2.10.2
-- php extensions: zip, exif, gd, sockets
+- alpine:3.24
+- php of various versions
+- composer:2.10
+- php extensions: zip, exif, gd, sockets, soap
 
 ## Why create this image?
 Now latest system like Ubuntu 22.04 LTS is troublesome to install old PHP version, but I need specific versions of PHP and Composer to build some old projects.
 
+## To build the image
+```
+# building image for php8.4
+docker build --platform linux/amd64 . -f versions/8.4/Dockerfile  -t crossrt/jenkins-php-composer:8.4-2.10
+
+# pushing the image
+docker push crossrt/jenkins-php-composer:8.4-2.10
+```
 ## To use the image once
 ```
 docker run --rm -it --entrypoint sh crossrt/jenkins-php-composer
