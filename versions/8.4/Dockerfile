@@ -6,6 +6,7 @@ RUN apk add --no-cache git zip unzip zlib-dev libpng-dev libzip-dev linux-header
 RUN docker-php-ext-install zip \
     && docker-php-ext-install exif \
     && docker-php-ext-install gd \
-    && docker-php-ext-install sockets
+    && docker-php-ext-install sockets \
+    && docker-php-ext-install bcmath
 
 ENV HOME=/tmp
